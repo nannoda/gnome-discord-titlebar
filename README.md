@@ -16,6 +16,13 @@ Inspired by [macOS Titlebar by Discord Extensions](https://github.com/discord-ex
 https://raw.githubusercontent.com/nannoda/gnome-discord-titlebar/main/src/titlebar.css
 ```
 
+### Additional Instructions for Linux Users
+
+If you're on Linux and want to use the Discord title bar instead of the one provided by your desktop environment, follow these steps:
+
+1. Open your Discord user settings (`CTRL + ,`).
+2. Navigate to the **Vesktop Settings** category. 
+3. Under **User Interface**, enable the **Discord Title Bar** option.
 
 ### Recommended Complementary Theme
 
