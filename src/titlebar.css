@@ -54,11 +54,17 @@
     margin-top: 16px;
     margin-right: 12px;
     border-radius: 16px;
-    background-color: var(--background-primary);
-    background-size: 0;
+    /* background-color: navajowhite; */
+    opacity: 0.5;
+    /* background-size: 0; */
     -webkit-app-region: no-drag;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, opacity 0s;
 }
+
+.platform-win.app-focused .typeWindows_a934d8 .winButton_a934d8 {
+    opacity: 1;
+}
+
 
 /* Windows buttons */
 .platform-win .typeWindows_a934d8 .winButton_a934d8 svg {
@@ -74,13 +80,18 @@
     /* background-color: var(--headerbar-backdrop-hover-color); */
 }
 
+
+
 /* Close Button */
-.platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8 {
-    background-color: var(--headerbar-bg-color);
+.platform-win .typeWindows_a934d8 .winButtonClose_a934d8 {
     background-image: var(--close-icon);
     background-size: var(--icon-size);
     background-repeat: no-repeat;
     background-position: var(--icon-pos);
+}
+
+.platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8 {
+    background-color: var(--headerbar-bg-color);
 }
 
 .platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8:hover {
@@ -92,6 +103,13 @@
 }
 
 /* Maximize Button */
+.platform-win .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(3n) {
+    background-image: var(--max-icon);
+    background-size: var(--icon-size);
+    background-repeat: no-repeat;
+    background-position: var(--icon-pos);
+}
+
 .platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(3n) {
     background-color: var(--headerbar-bg-color);
     background-image: var(--max-icon);
@@ -110,6 +128,13 @@
 
 
 /* Minimize Button */
+.platform-win .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n) {
+    background-image: var(--min-icon);
+    background-size: var(--icon-size);
+    background-repeat: no-repeat;
+    background-position: var(--icon-pos);
+}
+
 .platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n) {
     background-color: var(--headerbar-bg-color);
     background-image: var(--min-icon);
@@ -122,6 +147,6 @@
     background-color: var(--headerbar-backdrop-hover-color);
 }
 
-.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n):active {
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(n):active {
     background-color: var(--headerbar-backdrop-pressed-color);
 }
