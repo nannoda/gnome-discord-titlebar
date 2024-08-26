@@ -1,0 +1,2 @@
+# gnome-discord-titlebar
+ 
