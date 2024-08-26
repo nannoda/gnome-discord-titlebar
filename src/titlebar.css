@@ -1,153 +1,127 @@
-gnome-titlebar {
-    --window_bg_color: #242424;
-    --view_bg_color: #1e1e1e;
-    --close_icon: url("https://raw.githubusercontent.com/nannoda/gnome-discord-titlebar/main/assets/process-stop-symbolic.svg");
-}
-
 :root {
-    /* Light Theme Variables */
-    --headerbar-bg-color: #ffffff;
-    --headerbar-fg-color: rgba(0, 0, 0, 0.8);
-    --headerbar-border-color: rgba(0, 0, 0, 0.8);
-    --headerbar-backdrop-color: #fafafa;
-    --headerbar-shade-color: rgba(0, 0, 0, 0.12);
-    --headerbar-darker-shade-color: rgba(0, 0, 0, 0.12);
-  }
-  
-  [data-theme='dark'] {
     /* Dark Theme Variables */
     --headerbar-bg-color: #303030;
     --headerbar-fg-color: #ffffff;
     --headerbar-border-color: #ffffff;
     --headerbar-backdrop-color: #242424;
+    --headerbar-backdrop-hover-color: #363636;
+    --headerbar-backdrop-pressed-color: #757575;
     --headerbar-shade-color: rgba(0, 0, 0, 0.36);
     --headerbar-darker-shade-color: rgba(0, 0, 0, 0.9);
-  }
+    --icon-size: 16px 16px;
+    --icon-pos: 4px 4px;
+    --close-icon: url(https://raw.githubusercontent.com/nannoda/gnome-discord-titlebar/main/assets/window-close-symbolic.svg);
+    --min-icon: url(https://raw.githubusercontent.com/nannoda/gnome-discord-titlebar/main/assets/window-minimize-symbolic.svg);
+    --max-icon: url(https://raw.githubusercontent.com/nannoda/gnome-discord-titlebar/main/assets/window-maximize-symbolic.svg);
+}
 
+/* Title bar */
 .platform-win .typeWindows_a934d8 {
-  z-index: 102;
-  /* position: absolute; */
-  /* flex-direction: row; */
-  align-items: center;
-  /* top: 1px; */
-  width: 100%;
-  margin: 0;
-  height: 36px;
-  /* padding-top: 24px !important; */
-  /* padding-right: 9px; */
-  /* padding-left: 3px; */
-  -webkit-app-region: drag;
-  background-color: var(--background-primary);
-  /* background: transparent !important; */
+    z-index: 102;
+    /* position: absolute; */
+    /* flex-direction: row; */
+    align-items: center;
+    /* top: 1px; */
+    width: 100%;
+    margin: 0;
+    height: 36px;
+    /* padding-top: 24px !important; */
+    /* padding-right: 9px; */
+    /* padding-left: 3px; */
+    -webkit-app-region: drag;
+    background-color: var(--background-primary);
+    /* background: transparent !important; */
 }
-.platform-win .typeWindows_a934d8 .wordmark_a934d8 {
-  top: 11px;
-  left: 11px;
-  width: 52px;
-  height: 12px;
-  padding: 0;
-  -webkit-app-region: no-drag;
-}
+
+/* .platform-win .typeWindows_a934d8 .wordmark_a934d8 {
+    top: 11px;
+    left: 11px;
+    width: 52px;
+    height: px;
+    padding: 0;
+    -webkit-app-region: no-drag;
+  } */
 
 /* Discord Icon */
 .platform-win .typeWindows_a934d8 .wordmark_a934d8 g {
-  display: none;
+    display: none;
 }
 
 /* Button Size */
 .platform-win .typeWindows_a934d8 .winButton_a934d8 {
-  width: 16px;
-  height: 16px;
-  margin-right: 16px;
-  border-radius: 15px;
-  background-color: var(--background-primary);
-  background-size: 0;
-  -webkit-app-region: no-drag;
+    width: 24px;
+    height: 24px;
+    margin-top: 16px;
+    margin-right: 12px;
+    border-radius: 16px;
+    background-color: var(--background-primary);
+    background-size: 0;
+    -webkit-app-region: no-drag;
+    transition: background-color 0.3s;
 }
 
 /* Windows buttons */
 .platform-win .typeWindows_a934d8 .winButton_a934d8 svg {
-  display: none;
+    display: none;
 }
 
 
 .platform-win.app-focused .typeWindows_a934d8:hover div.winButton_a934d8 {
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-size: 100%; */
+    /* background-repeat: no-repeat; */
+
+    /* background-color: var(--headerbar-backdrop-hover-color); */
 }
 
 /* Close Button */
 .platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8 {
-  background-color: #ff5c57;
-  /* background-image: var(--close_icon); */
-  background-image: url(https://raw.githubusercontent.com/nannoda/gnome-discord-titlebar/main/assets/process-stop-symbolic.svg);
-  /* background-image: url('data:image/svg+xml,%3Csvg%20height%3D%2216px%22%20viewBox%3D%220%200%2016%2016%22%20width%3D%2216px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m%203%202%20c%20-0.265625%200%20-0.519531%200.105469%20-0.707031%200.292969%20c%20-0.390625%200.390625%20-0.390625%201.023437%200%201.414062%20l%204.292969%204.292969%20l%20-4.292969%204.292969%20c%20-0.390625%200.390625%20-0.390625%201.023437%200%201.414062%20s%201.023437%200.390625%201.414062%200%20l%204.292969%20-4.292969%20l%204.292969%204.292969%20c%200.390625%200.390625%201.023437%200.390625%201.414062%200%20s%200.390625%20-1.023437%200%20-1.414062%20l%20-4.292969%20-4.292969%20l%204.292969%20-4.292969%20c%200.390625%20-0.390625%200.390625%20-1.023437%200%20-1.414062%20c%20-0.1875%20-0.1875%20-0.441406%20-0.292969%20-0.707031%20-0.292969%20s%20-0.519531%200.105469%20-0.707031%200.292969%20l%20-4.292969%204.292969%20l%20-4.292969%20-4.292969%20c%20-0.1875%20-0.1875%20-0.441406%20-0.292969%20-0.707031%20-0.292969%20z%20m%200%200%22%20fill%3D%22%232e3436%22%2F%3E%3C%2Fsvg%3E'); */
-  /* background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=); */
+    background-color: var(--headerbar-bg-color);
+    background-image: var(--close-icon);
+    background-size: var(--icon-size);
+    background-repeat: no-repeat;
+    background-position: var(--icon-pos);
 }
-/* Minimize Button */
-.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n) {
-  background-color: #fdbd3d;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDUuMzk5OTlIMlY2LjU5OTk5SDEwVjUuMzk5OTlaIiBmaWxsPSIjQjM3MTFBIi8+Cjwvc3ZnPg==);
+
+.platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8:hover {
+    background-color: var(--headerbar-backdrop-hover-color);
 }
+
+.platform-win.app-focused .typeWindows_a934d8 .winButtonClose_a934d8:active {
+    background-color: var(--headerbar-backdrop-pressed-color);
+}
+
 /* Maximize Button */
 .platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(3n) {
-  order: 3;
-  background-color: #26c84b;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
+    background-color: var(--headerbar-bg-color);
+    background-image: var(--max-icon);
+    background-size: var(--icon-size);
+    background-repeat: no-repeat;
+    background-position: var(--icon-pos);
 }
 
-.guilds_a4d4d9 {
-  /* margin-top: 29px; */
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(3n):hover {
+    background-color: var(--headerbar-backdrop-hover-color);
 }
 
-.notice_be03aa, .bd-notice:first-child {
-  z-index: 103;
-  -webkit-app-region: drag;
-  border-radius: 0;
-}
-.notice_be03aa button, .notice_be03aa .closeIcon_be03aa, .bd-notice:first-child button, .bd-notice:first-child .closeIcon_be03aa {
-  -webkit-app-region: no-drag;
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(3n):active {
+    background-color: var(--headerbar-backdrop-pressed-color);
 }
 
-.standardSidebarView_c25c6d {
-  z-index: unset;
-}
-.standardSidebarView_c25c6d .sidebarRegionScroller_c25c6d {
-  z-index: 103;
-}
-.standardSidebarView_c25c6d .contentRegion_c25c6d {
-  z-index: 103;
-}
-.standardSidebarView_c25c6d .contentColumn_c25c6d {
-  -webkit-app-region: no-drag;
+
+/* Minimize Button */
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n) {
+    background-color: var(--headerbar-bg-color);
+    background-image: var(--min-icon);
+    background-size: var(--icon-size);
+    background-repeat: no-repeat;
+    background-position: var(--icon-pos);
 }
 
-.platform-win .sidebar_a4d4d9 {
-  border-radius: 0;
-}
-.platform-win .sidebar_a4d4d9 .header_fd6364, .platform-win .sidebar_a4d4d9 .searchBar_f0963d {
-  z-index: 103;
-}
-.platform-win .sidebar_a4d4d9 .header_fd6364, .platform-win .sidebar_a4d4d9 .searchBarComponent_f0963d {
-  -webkit-app-region: no-drag;
-}
-.platform-win .sidebar_a4d4d9 .searchBar_f0963d {
-  -webkit-app-region: drag;
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n):hover {
+    background-color: var(--headerbar-backdrop-hover-color);
 }
 
-.chat_a7d72e {
-  z-index: 103;
-}
-
-.container_e44302 {
-  z-index: 103;
-  -webkit-app-region: drag;
-}
-.container_e44302 .topic_bf3bbb,
-.container_e44302 .title_a7d72e,
-.container_e44302 .nicknames_d6c26f > div,
-.container_e44302 .item_c2739c,
-.container_e44302 .titleWrapper_e44302[role=button] {
-  -webkit-app-region: no-drag;
+.platform-win.app-focused .typeWindows_a934d8 .winButtonMinMax_a934d8:nth-child(2n):active {
+    background-color: var(--headerbar-backdrop-pressed-color);
 }
