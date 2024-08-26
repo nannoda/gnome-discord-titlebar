@@ -18,29 +18,13 @@
 /* Title bar */
 .platform-win .typeWindows_a934d8 {
     z-index: 102;
-    /* position: absolute; */
-    /* flex-direction: row; */
     align-items: center;
-    /* top: 1px; */
     width: 100%;
     margin: 0;
     height: 36px;
-    /* padding-top: 24px !important; */
-    /* padding-right: 9px; */
-    /* padding-left: 3px; */
     -webkit-app-region: drag;
     background-color: var(--background-primary);
-    /* background: transparent !important; */
 }
-
-/* .platform-win .typeWindows_a934d8 .wordmark_a934d8 {
-    top: 11px;
-    left: 11px;
-    width: 52px;
-    height: px;
-    padding: 0;
-    -webkit-app-region: no-drag;
-  } */
 
 /* Discord Icon */
 .platform-win .typeWindows_a934d8 .wordmark_a934d8 g {
@@ -54,9 +38,8 @@
     margin-top: 16px;
     margin-right: 12px;
     border-radius: 16px;
-    /* background-color: navajowhite; */
+    cursor: auto;
     opacity: 0.5;
-    /* background-size: 0; */
     -webkit-app-region: no-drag;
     transition: background-color 0.3s, opacity 0s;
 }
@@ -65,22 +48,10 @@
     opacity: 1;
 }
 
-
 /* Windows buttons */
 .platform-win .typeWindows_a934d8 .winButton_a934d8 svg {
     display: none;
 }
-
-
-.platform-win.app-focused .typeWindows_a934d8:hover div.winButton_a934d8 {
-    /* background-position: center; */
-    /* background-size: 100%; */
-    /* background-repeat: no-repeat; */
-
-    /* background-color: var(--headerbar-backdrop-hover-color); */
-}
-
-
 
 /* Close Button */
 .platform-win .typeWindows_a934d8 .winButtonClose_a934d8 {
