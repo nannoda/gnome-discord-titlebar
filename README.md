@@ -1,5 +1,8 @@
 # GNOME Discord Title Bar
 
+![image](https://github.com/user-attachments/assets/792ea683-ad49-47cc-8bad-1a6ccfc4e22e)
+
+
 A Discord theme that mimics the look of GNOME's title bar.
 
 Inspired by [macOS Titlebar by Discord Extensions](https://github.com/discord-extensions/macos-titlebar).
