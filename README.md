@@ -38,7 +38,7 @@ https://raw.githack.com/GeopJr/DNOME/dist/DNOME.css
 ```
 
 ### Known issues:
-- #1 : The theme may not work properly if installed using the Discord+Vencord installation script. It is recommended to install [Vesktop](https://flathub.org/apps/dev.vencord.Vesktop) directly from Flatpak to avoid potential issues. 
+- [#1](https://github.com/nannoda/gnome-discord-titlebar/issues/1) : The theme may not work properly if installed using the Discord+Vencord installation script. It is recommended to install [Vesktop](https://flathub.org/apps/dev.vencord.Vesktop) directly from Flatpak to avoid potential issues. 
 
 ### Credits
 
