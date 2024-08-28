@@ -37,6 +37,8 @@ To enhance the GNOME look, it's recommended to use the **DNOME** theme alongside
 https://raw.githack.com/GeopJr/DNOME/dist/DNOME.css
 ```
 
+### Known issues:
+- #1 : The theme may not work properly if installed using the Discord+Vencord installation script. It is recommended to install [Vesktop](https://flathub.org/apps/dev.vencord.Vesktop) directly from Flatpak to avoid potential issues. 
 
 ### Credits
 
